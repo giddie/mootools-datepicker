@@ -1,3 +1,8 @@
+# Fork Improvements
+
+- Months and years are now displayed in tables instead of divs.
+- A bootstrap-like theme is available. Sources are written in SCSS and can be easily modified as the positionning is no longer done in absolute.
+
 MooTools-DatePicker
 ===================
 
@@ -50,7 +55,7 @@ Then you can simply use, for example:
 
 ### Theming:
 
-Theming is done with CSS files, there are four themes available, which you can find in the Source folder.
+Theming is done with CSS files, there are five themes available, which you can find in the Source folder.
 
 Just include the CSS file and set the `pickerClass` option.
 
@@ -70,11 +75,14 @@ Currently the following languages are supported
 - es-ES
 - fr-FR
 - he-IL
+- hu-HU
 - it-IT
 - nl-NL
 - pl-PL
 - pt-BR
 - ru-RU
+- sv-SE
+- uk-UA
 
 You can set the current language with:
 
@@ -109,6 +117,7 @@ All the options of the Picker and Picker.Attach classes, and:
 - yearPicker: (*boolean*, defaults to `true`) Enable/disable yearpicker functionality. Makes it much easier to change years.
 - yearPerPage: (*number*, defaults to `20`) Amount of years to show in the year-picking view. Be aware that this may affect your layout.
 - startView: (*string*, defaults to `days`) The view that will be showed when the picker opens. The options are `time`, `days`, `months` and `years`
+- startDay: (*number*, defaults to 1) The day number for the start of the week. 0 - sunday, 1 - monday, etc.
 - openLastView: (*boolean*, defaults to `false`) Opens the last opened view after the picker is opened again, instead of the `startView`
 - pickOnly: (*string*, defaults to `false`) If you just want to pick a year, month, day or time. The options are `time`, `days`, `months` and `years`
 - canAlwaysGoUp: (*array*, defaults to `['months', 'days']`) The views where you can click the title to go up. The options are `time`, `days`, `months` and `years`
@@ -144,7 +153,7 @@ All the options of the Picker and Picker.Attach classes, and:
 		timePicker: true,
 		pickerClass: 'datepicker_jqui',
 		onSelect: function(date){
-			myHiddenField.set('value', date.format('%s');
+			myHiddenField.set('value', date.format('%s'));
 		}
 	});
 
